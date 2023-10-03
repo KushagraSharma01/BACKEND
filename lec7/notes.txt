@@ -1,0 +1,9 @@
+Template
+
+hbs
+pug
+nunjucks
+ejs
+
+ejs ->templating engine
+whenever you want to create templates in ejs you need a create a folder for views(templates)

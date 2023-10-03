@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- label is like a tag that binds the input with itself
+label attribute for and input attribute id when becomes equal then binding is done and therefore name attribute has no role  -->
+
+<!-- Two labels are created for username and comment -->
+
+<body>
+    <h1>Form to Edit Commment</h1>
+    <!-- action contains the path where the form will go after submission -->
+    <form action="/comments/<%= foundcomment.comment %>?_Method=PATCH" method="POST">
+
+        <label for="user">Comment:</label>
+        <input type="text" name="comment" id="user" value="<%= foundcomment.comment %>">
+
+        <button type="submit">Edit the comment</button>
+        
+    </form>
+</body>
+</html>
