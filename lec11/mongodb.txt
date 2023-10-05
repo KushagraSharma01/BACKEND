@@ -1,0 +1,16 @@
+MONGODB(NOSQL)
+--------------
+
+MERN Stack
+MEAN Stack
+MEVN Stack
+-->all includes mongodb as it is easy to use and understand
+-->objects are included
+
+-->in NOSQL we use collections in place of tables in SQL.
+
+                                                FOR databases
+                            SQL                                                     NOSQL
+                        1.tables                                              1.collections
+                                                                              -->Every single atomic entity inside a collection is a document
+                                                                              

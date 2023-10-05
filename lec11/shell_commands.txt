@@ -1,0 +1,45 @@
+mogosh (to enable shell)
+show databases; (semi colon not compulsory)
+show dbs (list all the databases)
+use databasename(case sensitive)  --> if the name already exits then it will use it,else create a new one
+
+
+use gla
+db -->show current dbs
+show db --> will not show gla in the list until it contains at least one collection
+
+db.createCollection('Collectionname') --> creates a new collection or table in your current db(it is a method)
+
+show db --> now it will show db named gla
+show collections --> returns all collections  (it is not a method)
+
+exit (exit from shell)
+
+ALERT!!!!!!!
+DONT USE!!!!!
+-----> db.dropDatabse()
+-----> never make changes in test
+
+---CRUD---
+All crud methods accept an object
+1. Create
+    -->db.collectionname.insertOne({name:"bahubali",year:2015,imdb:9,isWatched:true})
+    -->db.collectionname.insertMany([{},{},{},{}])
+    //gives a unique object id for each collection by mongodb
+
+2. Read
+    -->db.collectionname.find() --> returns all the documents from the collection(can also pass with an empty object)(only one which works without an object)
+    -->db.collectionname.find({isWacthed:true})  -->can input any criteria in it   -->returns the specific documents
+    -->db.collectionname.find({isWacthed:true,imdb:9})
+
+3. Update
+    -->db.collectionname.updateOne({imdb:9},{$set: {isWatched:false}}) --> $set is an operator, here operator also accepts an object
+    -->db.collectionname.updateOne({imdb:9},{$set: {isWatched:false,year:2003}})
+    -->db.collectionname.updateOne({year:2017,imdb:6.5},{$set: {name:monu,isWatched:true}}) -->changes the first occurence
+    -->db.collectionname.updateMany({isWatched:true},{$set: {imdb:8}})  -->updates all the matching documents
+
+4. Delete (try to avoid)
+    -->db.collectionname.deleteOne()    -->does not work
+    -->db.collectionname.deleteOne({})  -->deletes the first occurring document
+    -->db.collectionname.deleteOne({imdb:8})
+    -->db.collectionname.deleteMany({imdb:8})
