@@ -1,0 +1,2 @@
+databases are used over file system as they handle data redundacy directly and easily
+Ex:- like the registers in college and hostel to keep a student's information(file system)
