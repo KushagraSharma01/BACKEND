@@ -1,0 +1,8 @@
+greater than , greater than equals
+less than , less than equals
+
+db.collectionname.find({imdb:{$gt:6.5}}) --> returns all documents which satisfies the given condition
+db.collectionname.find({imdb:{$gte:6.5}})
+
+--Range--
+db.collectionname.find({imdb: {$in :[]}}) //accepts an array
