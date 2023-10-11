@@ -1,0 +1,8 @@
+ORM(Object Relational Mapper)/ODM ----> interface between express(works in js) and database(works in JSON)
+ORM--> when SQL database is used
+ODM--> when NOSQL database is used
+ODM-->JS to JSON -->req
+    JSON to JS --> res
+    ex:- Mongoose
+
+DB works with a server behind the scene(has it's own server with a unique port number)

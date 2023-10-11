@@ -13,4 +13,7 @@ MEVN Stack
                             SQL                                                     NOSQL
                         1.tables                                              1.collections
                                                                               -->Every single atomic entity inside a collection is a document
-                                                                              
+
+JSON is first converted to BSON (which is in binary format)and then is read by the system
+BSON is faster than JSON
+There are limited no. of datatypes in JSON(like boolean,no.,string, etc) but BSON gives more datatypes than JSON
