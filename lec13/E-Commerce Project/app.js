@@ -3,6 +3,7 @@ const app = express(); // instance
 const path = require('path');
 const mongoose = require('mongoose');
 const seedDB = require("./seed");
+const reviewRoutes =require("./routes/reviewRoutes");
 const productRoutes = require("./routes/productRoutes");
 
 mongoose.connect('mongodb://127.0.0.1:27017/baigan')

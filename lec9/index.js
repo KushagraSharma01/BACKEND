@@ -5,8 +5,9 @@ const methodOverrride=require('method-override');
 
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
-app.use(express.urlencoded({extended:true}));
-app.use(methodOverrride('_Method'));
+app.use(express.urlencoded({extended:true}));//specifying the middleware to define the req.body
+//extended=true is used to tell that multiple objects can be present
+app.use(methodOverrride('_Method'));//to override a method to perform specific task(query parameter)
 
 
 let comments=[
@@ -77,7 +78,7 @@ app.post('/comments',(req,res)=>{
 
 //To show information about one comment
 app.get('/comments/:commentId',(req,res)=>{
-    let{commentId}=req.params;
+    let{commentId}=req.params;      //here req.params gives the id of the objects in the url
     let foundcomment=comments.find((item)=>{return item.id==commentId});
     res.render('show',{foundcomment});
 })

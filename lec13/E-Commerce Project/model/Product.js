@@ -18,7 +18,13 @@ let productSchema = new mongoose.Schema({
     desc: {
         type: String,
         trim:true
-    }
+    },
+    reviews:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'Review' //giving reference to the schema mentioned in type
+        }
+    ]
 })
 
 let Product = mongoose.model('Product', productSchema);

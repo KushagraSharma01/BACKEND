@@ -1,0 +1,3 @@
+when we make a single collection for product details then we should make a seperate collection for reviews(or elements which have 1 to many atributes).
+hence for reviews a single collection is created to store the id's of the 1 to many element 
+to increase the readability of the products
